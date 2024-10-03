@@ -1,0 +1,28 @@
+﻿@model Models.Branch
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1 class="text-green-color">Eliminar</h1>
+
+<h3 class="text-info">¿Estas seguro que deseas eliminar este registro?</h3>
+<div class="table bg-green-opaque text-white-color table-borderless rounded-component mt-2">
+    <h4 class="bg-green-light">Sucursal</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2 text-lime-color ms-2">
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+    </dl>
+
+</div>
+
+<form asp-action="Delete" method="Post">
+    <input type="hidden" asp-for="idBranch" />
+    <input type="submit" value="Eliminar" class="rounded-component btn-borderless link-button bg-green-light" /> |
+    <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Index">Regresar</a>
+</form>

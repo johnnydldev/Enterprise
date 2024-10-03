@@ -4,3 +4,5 @@ C:\Users\JohnnyDL\Documents\Proyectos C#\MVC\EnterpriseProject\Models\obj\Debug\
 C:\Users\JohnnyDL\Documents\Proyectos C#\MVC\EnterpriseProject\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\JohnnyDL\Documents\Proyectos C#\MVC\EnterpriseProject\Models\obj\Debug\Models.dll
 C:\Users\JohnnyDL\Documents\Proyectos C#\MVC\EnterpriseProject\Models\obj\Debug\Models.pdb
+C:\Users\JohnnyDL\Documents\Proyectos C#\MVC\EnterpriseProject\Models\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\JohnnyDL\Documents\Proyectos C#\MVC\EnterpriseProject\Models\obj\Debug\Models.csproj.Up2Date

@@ -25,6 +25,10 @@ button{
     padding: 5px;
 }
 
+a{
+    padding: 5px;
+}
+
 .bg-orange {
     background-color: #E2703A;
 }
@@ -118,4 +122,24 @@ button{
 
 .table-borderless{
     border: none;
+}
+
+.link-button{
+    text-decoration: none;
+    color: white;
+}
+
+.link-btn-dark-text {
+    text-decoration: none;
+    color: black;
+}
+
+.link-button:hover, .link-btn-dark-text:hover {
+    text-decoration: none;
+    color: #347928;
+}
+
+.form-borderless {
+    border: none;
+    padding: 10px;
 }

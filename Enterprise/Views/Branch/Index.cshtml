@@ -8,9 +8,9 @@
     <h2 class="text-green-color">
         Sucursales
     </h2>
-    <button class="rounded-component btn-borderless text-white-color bg-green-light">
-        Crear Nueva
-    </button>
+    
+    <a class="link-button rounded-component btn-borderless bg-green-light" asp-action="Create">Crear Nueva</a>
+   
     <table id="branch-table" class="table bg-green-opaque text-white-color table-borderless rounded-component mt-2">
         <thead class="bg-green-light">
             <tr>
@@ -29,9 +29,9 @@
                         <td>@Html.DisplayFor(varItem => item.idBranch)</td>
                         <td>@Html.DisplayFor(varItem => item.description)</td>
                         <td>
-                            <button class="rounded-component btn-borderless bg-green-lime" asp-route-id="@item.idBranch">Editar</button>
-                            <button class="rounded-component btn-borderless bg-green-lime" asp-route-id="@item.idBranch">Detalles</button>
-                            <button class="rounded-component btn-borderless bg-green-lime" asp-route-id="@item.idBranch">Eliminar</button>
+                            <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Edit" asp-route-id="@item.idBranch">Editar</a>
+                            <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Details" asp-route-id="@item.idBranch">Detalles</a>
+                            <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Delete" asp-route-id="@item.idBranch">Eliminar</a>
                         </td>
                     </tr>
                 }

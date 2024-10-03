@@ -3,31 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\enterprise.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:enterprise.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\controllers\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:controllers\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\views\\branch\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:views\\branch\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6CB0581-F7BB-458E-A5C3-D407E16229D1}|..\\DAOControllers\\DAOControllers.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\daocontrollers\\daobranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\wwwroot\\js\\branch\\branch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:wwwroot\\js\\branch\\branch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\wwwroot\\js\\branch\\indexbranch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:wwwroot\\js\\branch\\indexbranch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\views\\branch\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:views\\branch\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6CB0581-F7BB-458E-A5C3-D407E16229D1}|..\\DAOControllers\\DAOControllers.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\daocontrollers\\daobranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6CB0581-F7BB-458E-A5C3-D407E16229D1}|..\\DAOControllers\\DAOControllers.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\daocontrollers\\managercontrollers\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -40,55 +32,56 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Enterprise",
-              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Enterprise.csproj",
-              "RelativeDocumentMoniker": "Enterprise.csproj",
-              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Enterprise.csproj",
-              "RelativeToolTip": "Enterprise.csproj",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-03T05:53:18.294Z",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Branch\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Branch\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Branch\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Branch\\Delete.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T22:36:47.293Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAiwBMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T08:39:42.503Z",
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAHsAAAAAAAAAAADwv34AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-03T19:47:35.576Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Branch\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Branch\\Index.cshtml",
               "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Branch\\Index.cshtml",
               "RelativeToolTip": "Views\\Branch\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-01T07:12:34.995Z"
+              "WhenOpened": "2024-10-01T07:12:34.995Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BranchController.cs",
               "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Controllers\\BranchController.cs",
               "RelativeDocumentMoniker": "Controllers\\BranchController.cs",
               "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Controllers\\BranchController.cs",
               "RelativeToolTip": "Controllers\\BranchController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAEwJgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T07:07:46.483Z",
               "EditorCaption": ""
@@ -96,50 +89,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IndexBranch.js",
-              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\js\\Branch\\IndexBranch.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\Branch\\IndexBranch.js",
-              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\js\\Branch\\IndexBranch.js",
-              "RelativeToolTip": "wwwroot\\js\\Branch\\IndexBranch.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-01T07:54:01.627Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Branch.js",
-              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\js\\Branch\\Branch.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\Branch\\Branch.js",
-              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\js\\Branch\\Branch.js",
-              "RelativeToolTip": "wwwroot\\js\\Branch\\Branch.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-01T07:39:28.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\ManagerControllers\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "..\\DAOControllers\\ManagerControllers\\IGenericRepository.cs",
               "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\ManagerControllers\\IGenericRepository.cs",
               "RelativeToolTip": "..\\DAOControllers\\ManagerControllers\\IGenericRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:39:14.487Z"
+              "WhenOpened": "2024-10-01T06:39:14.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DAOBranch.cs",
               "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\DAOBranch.cs",
               "RelativeDocumentMoniker": "..\\DAOControllers\\DAOBranch.cs",
               "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\DAOBranch.cs",
               "RelativeToolTip": "..\\DAOControllers\\DAOBranch.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAADIAAABUAAAAAAAAAA==",
+              "ViewState": "AgIAALMAAAAAAAAAAAAgwM0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T03:15:41.982Z"
+              "WhenOpened": "2024-09-23T03:15:41.982Z",
+              "EditorCaption": ""
             }
           ]
         }

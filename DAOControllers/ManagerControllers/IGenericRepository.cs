@@ -14,7 +14,7 @@ namespace DAOControllers.ManagerControllers
         Task<int> create(T model);
         Task<bool> edit(T model);
         Task<bool> delete(int id);
-
+        Task<int> getMaxId();
 
     }
 }

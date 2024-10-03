@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\JohnnyDL\Documents\Proyectos C#\MVC\EnterpriseProject\Enterprise
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/JohnnyDL/Documents/Proyectos C\#/MVC/EnterpriseProject/Enterprise/Views/Branch/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JohnnyDL/Documents/Proyectos C\#/MVC/EnterpriseProject/Enterprise/Views/Branch/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JohnnyDL/Documents/Proyectos C\#/MVC/EnterpriseProject/Enterprise/Views/Branch/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JohnnyDL/Documents/Proyectos C\#/MVC/EnterpriseProject/Enterprise/Views/Branch/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/JohnnyDL/Documents/Proyectos C\#/MVC/EnterpriseProject/Enterprise/Views/Branch/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
