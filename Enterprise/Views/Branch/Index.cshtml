@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Models.Branch>
+
+@{
+    ViewData["Title"] = "Sucursales";
+}
+
+<div>
+    <h2 class="text-green-color">
+        Sucursales
+    </h2>
+    <button class="rounded-component btn-borderless text-white-color bg-green-light">
+        Crear Nueva
+    </button>
+    <table id="branch-table" class="table bg-green-opaque text-white-color table-borderless rounded-component mt-2">
+        <thead class="bg-green-light">
+            <tr>
+                <th>Id</th>
+                <th>Descripción</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>@Html.DisplayFor(varItem => item.idBranch)</td>
+                        <td>@Html.DisplayFor(varItem => item.description)</td>
+                        <td>
+                            <button class="rounded-component btn-borderless bg-green-lime" asp-route-id="@item.idBranch">Editar</button>
+                            <button class="rounded-component btn-borderless bg-green-lime" asp-route-id="@item.idBranch">Detalles</button>
+                            <button class="rounded-component btn-borderless bg-green-lime" asp-route-id="@item.idBranch">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan='6' class="text-center">No se encontraron productos.</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+    <!--<script src="~/js/Branch/IndexBranch.js"></script>-->
+}

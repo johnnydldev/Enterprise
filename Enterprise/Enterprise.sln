@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enterprise", "Enterprise.csproj", "{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "..\Models\Models.csproj", "{3D2FC50E-7413-4ABB-90EA-6D1716866ABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOControllers", "..\DAOControllers\DAOControllers.csproj", "{E6CB0581-F7BB-458E-A5C3-D407E16229D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2FC50E-7413-4ABB-90EA-6D1716866ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2FC50E-7413-4ABB-90EA-6D1716866ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2FC50E-7413-4ABB-90EA-6D1716866ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2FC50E-7413-4ABB-90EA-6D1716866ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CB0581-F7BB-458E-A5C3-D407E16229D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CB0581-F7BB-458E-A5C3-D407E16229D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CB0581-F7BB-458E-A5C3-D407E16229D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CB0581-F7BB-458E-A5C3-D407E16229D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CEF329D-95D8-41B2-ACB7-CC8A5BDEEDC5}
+	EndGlobalSection
+EndGlobal

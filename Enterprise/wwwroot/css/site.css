@@ -1,0 +1,121 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+button{
+    padding: 5px;
+}
+
+.bg-orange {
+    background-color: #E2703A;
+}
+
+.bg-green-opaque {
+    background-color: #347928;
+}
+
+.bg-green-light {
+    background-color: #46bf00;
+}
+
+.bg-green-lime {
+    background-color: #D2FF72;
+}
+
+.bg-blue-king {
+    background-color: #4C3BCF;
+}
+
+.bg-blue-heaven {
+    background-color: #4B70F5;
+}
+
+.bg-blue-turquese {
+    background-color: #3DC2EC;
+}
+
+
+.bg-red-warned {
+    background-color: #8C3061;
+}
+
+.bg-red-dark {
+    background-color: #C63C51;
+}
+
+.bg-red-light {
+    background-color: #D95F59;
+}
+
+.bg-gray {
+    background-color: #BBBBBB;
+}
+
+.text-white-color{
+    color: white;
+}
+
+.text-black-color {
+    color: #000000;
+}
+
+.text-lime-color {
+    color: #D2FF72;
+}
+
+.text-green-color {
+    color: #347928;
+}
+
+.text-yellow-color {
+    color: #feef47;
+}
+
+.text-yellow-color:hover, .text-yellow-color:focus{
+    color: #white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+.border-component {
+    border: solid 1px black;
+}
+
+.rounded-component {
+    border-radius: 10px;
+}
+
+.btn-borderless{
+    border: none;
+    margin: 2px;
+}
+
+.btn-borderless:hover {
+    border: solid 1px #73EC8B;
+    color: #347928;
+    background-color: white;
+}
+
+.table-borderless{
+    border: none;
+}
