@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Models.Employee>
+
+@{
+    ViewData["Title"] = "Empleados";
+}
+
+<div>
+    <h2 class="text-green-color">
+       Empleados
+    </h2>
+
+    <a class="link-button rounded-component btn-borderless bg-green-light" asp-action="Create">Crear Nuevo(a)</a>
+
+    <table id="employee-table" class="table bg-green-opaque text-white-color table-borderless rounded-component mt-2">
+        <thead class="bg-green-light">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Genero</th>
+                <th>Puesto de Trabajo</th>
+                <th>Sucursal</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>@Html.DisplayFor(varItem => item.idEmployee)</td>
+                        <td>@Html.DisplayFor(varItem => item.name)</td>
+                        <td>@Html.DisplayFor(varItem => item.age)</td>
+                        <td>@Html.DisplayFor(varItem => item.sex)</td>
+                        <td>@Html.DisplayFor(varItem => item.workDescription)</td>
+                        <td>@Html.DisplayFor(varItem => item.objBranch.description)</td>
+                        <td>
+                            <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Edit" asp-route-id="@item.idEmployee">Editar</a>
+                            <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Details" asp-route-id="@item.idEmployee">Detalles</a>
+                            <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Delete" asp-route-id="@item.idEmployee">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan='6' class="text-center">No se encontraron productos.</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

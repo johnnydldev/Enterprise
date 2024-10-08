@@ -9,17 +9,6 @@
         "projectUniqueName": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\DAOControllers.csproj",
         "projectName": "DAOControllers",
         "projectPath": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\DAOControllers.csproj",
-        "packagesPath": "C:\\Users\\JohnnyDL\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\JohnnyDL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
         "frameworks": {
           "net481": {
             "projectReferences": {
@@ -28,12 +17,7 @@
               }
             }
           }
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low"
-        },
-        "packagesConfigPath": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\packages.config"
+        }
       },
       "frameworks": {
         "net481": {}
@@ -138,27 +122,11 @@
         "projectUniqueName": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Models\\Models.csproj",
         "projectName": "Models",
         "projectPath": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\JohnnyDL\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\JohnnyDL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
         "frameworks": {
           "net481": {
             "projectReferences": {}
           }
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low"
-        },
-        "packagesConfigPath": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Models\\packages.config"
+        }
       },
       "frameworks": {
         "net481": {}

@@ -1,0 +1,48 @@
+﻿@model Models.Employee
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1 class="text-green-color">Detalles</h1>
+
+<div class="table bg-green-opaque text-white-color table-borderless rounded-component mt-2">
+    <h4 class="bg-green-light">Empleado</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2 text-lime-color ms-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class="col-sm-2 text-lime-color ms-2">
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.age)
+        </dd>
+        <dt class="col-sm-2 text-lime-color ms-2">
+            @Html.DisplayNameFor(model => model.sex)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.sex)
+        </dd>
+        <dt class="col-sm-2 text-lime-color ms-2">
+            @Html.DisplayNameFor(model => model.workDescription)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.workDescription)
+        </dd>
+        <dt class="col-sm-2 text-lime-color ms-2">
+            @Html.DisplayNameFor(model => model.objBranch)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.objBranch.description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="rounded-component btn-borderless link-button bg-green-light" asp-action="Edit" asp-route-id="@Model?.idEmployee">Editar</a> |
+    <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Index">Regresar</a>
+</div>

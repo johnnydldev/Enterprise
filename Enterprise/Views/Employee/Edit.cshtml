@@ -1,0 +1,60 @@
+﻿@model Models.Employee
+
+@{
+    ViewData["Title"] = "Editar Empleado";
+}
+
+<h1 class="text-green-color">Editar</h1>
+
+<h4 class="text-green-color">Empleado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" class="bg-green-opaque form-borderless rounded-component" method="Post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idEmployee" />
+            <div class="form-group">
+                <label asp-for="name" class="control-label text-white-color"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label text-white-color"></label>
+                <input asp-for="age" class="form-control" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sex" class="control-label text-white-color"></label>
+                <select asp-for="sex" class="form-select" aria-label="Default select example">
+                    <option selected disabled>Elige una opción</option>
+                    <option class="opt-green-color text-white-color" value="Hombre">Hombre</option>
+                    <option class="opt-green-color text-white-color" value="Mujer">Mujer</option>
+                </select>
+                <span asp-validation-for="sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="workDescription" class="control-label text-white-color"></label>
+                <input asp-for="workDescription" class="form-control" />
+                <span asp-validation-for="workDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="objBranch" class="control-label text-white-color"></label>
+                <select asp-for="objBranch" class="form-select" aria-label="Default select example" asp-items="ViewBag.listBranch">
+                    <option selected disabled>Elige una opción</option>
+
+                </select>
+                <span asp-validation-for="objBranch" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-2 d-flex justify-content-between">
+                <input type="submit" value="Editar" class="rounded-component btn-borderless text-white-color bg-green-light" />
+                <a class="rounded-component btn-borderless bg-green-lime link-btn-dark-text" asp-action="Index">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

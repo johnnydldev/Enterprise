@@ -21,7 +21,12 @@ body {
   margin-bottom: 60px;
 }
 
-button{
+#not-found-text{
+    font-size: 4rem;
+    color: #347928;
+}
+
+button {
     padding: 5px;
 }
 
@@ -142,4 +147,12 @@ a{
 .form-borderless {
     border: none;
     padding: 10px;
+}
+
+.opt-green-color {
+    background-color: #347928;
+}
+
+.opt-green-color:hover {
+    background-color: #D2FF72;
 }

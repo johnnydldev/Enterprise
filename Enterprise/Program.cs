@@ -16,6 +16,7 @@ builder.Services.AddDbContext<DBContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("enterpriseConnection")));
 
 builder.Services.AddScoped<IGenericRepository<Branch>, DAOBranch>();
+builder.Services.AddScoped<IGenericRepository<Employee>, DAOEmployee>();
 
 var app = builder.Build();
 

@@ -20,13 +20,9 @@ namespace DAOControllers
             _connection = configuration.GetConnectionString("enterpriseConnection");
         }
 
-        //SqlConnection objConnection = new  SqlConnection(_connection);
-
         public async Task<List<Branch>> getAll()
         {
             List<Branch> allBranches = new List<Branch>();
-
-            //string jsonStringResponse;
 
             try
             {
@@ -242,45 +238,6 @@ namespace DAOControllers
 
             return response;
         }//End delete branch
-
-        public string createJsonResponse(Branch objBranch)
-        {
-            string jsonStringResponse;
-            try
-            {
-                var options = new JsonSerializerOptions { WriteIndented = true };
-
-                jsonStringResponse = JsonSerializer.Serialize(objBranch, options);
-                Console.Write(jsonStringResponse);
-            }
-            catch (NotSupportedException ex)
-            {
-                string msg = ex.Message.ToString();
-                jsonStringResponse = "{}";
-            }
-
-            return jsonStringResponse;
-        }//End create json string object response
-
-        public string createJsonResponse(List<Branch> allBranches)
-        {
-            string jsonStringResponse;
-            try
-            {
-                var options = new JsonSerializerOptions { WriteIndented = true };
-
-                jsonStringResponse = JsonSerializer.Serialize(allBranches, options);
-                Console.Write(jsonStringResponse);
-
-            }
-            catch (NotSupportedException ex)
-            {
-                string msg = ex.Message.ToString();
-                jsonStringResponse = "[]";
-            }
-
-            return jsonStringResponse;
-        }//End create json string list objects response
 
 
     }//End DAO branch class

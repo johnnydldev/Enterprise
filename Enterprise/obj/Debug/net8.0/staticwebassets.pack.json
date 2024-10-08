@@ -253,6 +253,30 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\uploads\\animal.png",
+      "PackagePath": "staticwebassets\\uploads\\animal.png"
+    },
+    {
+      "Id": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\uploads\\four.png",
+      "PackagePath": "staticwebassets\\uploads\\four.png"
+    },
+    {
+      "Id": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\uploads\\spaceship.png",
+      "PackagePath": "staticwebassets\\uploads\\spaceship.png"
+    },
+    {
+      "Id": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\uploads\\ufo.png",
+      "PackagePath": "staticwebassets\\uploads\\ufo.png"
+    },
+    {
+      "Id": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\uploads\\unplugged.png",
+      "PackagePath": "staticwebassets\\uploads\\unplugged.png"
+    },
+    {
+      "Id": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\wwwroot\\uploads\\zero.png",
+      "PackagePath": "staticwebassets\\uploads\\zero.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Enterprise.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

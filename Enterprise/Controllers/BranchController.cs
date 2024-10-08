@@ -34,13 +34,6 @@ namespace Enterprise.Controllers
             return View("Index", _listBranch);
         }
 
-        [HttpGet("Branch/showBranches")]
-        public async Task<IActionResult> showBranches()
-        {
-            List<Branch> _listBranch = await _branchRepository.getAll();
-            return Ok(_listBranch);
-        }
-
         [HttpGet]
         public IActionResult Create()
         {
@@ -80,7 +73,7 @@ namespace Enterprise.Controllers
             Branch branch = await _branchRepository.getById(id);
             if (branch == null)
             {
-                return NotFound();
+                return View("~/Views/NotFound/NotFound.cshtml");
             }
 
             return View("Edit", branch);
@@ -93,7 +86,7 @@ namespace Enterprise.Controllers
         {
             if (id != branch.idBranch)
             {
-                return NotFound();
+                return View("~/Views/NotFound/NotFound.cshtml");
             }
 
             if (ModelState.IsValid)
@@ -110,13 +103,14 @@ namespace Enterprise.Controllers
                     else
                     {
                         Console.WriteLine(BadRequest(branch));
-                        return NotFound();
+                        return View("~/Views/NotFound/NotFound.cshtml");
+
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message.ToString());
-                    return NotFound();
+                    return View("~/Views/NotFound/NotFound.cshtml");
                 }
             }
 
@@ -128,7 +122,7 @@ namespace Enterprise.Controllers
             Branch branch = await _branchRepository.getById(id);
             if (branch == null)
             {
-                return NotFound();
+                return View("~/Views/NotFound/NotFound.cshtml");
             }
 
             return View("Details", branch);
@@ -140,7 +134,7 @@ namespace Enterprise.Controllers
             Branch branch = await _branchRepository.getById(id);
             if (branch == null)
             {
-                return NotFound();
+                return View("~/Views/NotFound/NotFound.cshtml");
             }
 
             return View("Delete", branch);
@@ -153,7 +147,7 @@ namespace Enterprise.Controllers
             Branch branch = await _branchRepository.getById(idBranch);
             if (branch == null)
             {
-                return NotFound();
+                return View("~/Views/NotFound/NotFound.cshtml");
             }
             else
             {
@@ -169,18 +163,17 @@ namespace Enterprise.Controllers
                     else
                     {
                         Console.WriteLine(BadRequest(branch));
-                        return NotFound();
+                        return View("~/Views/NotFound/NotFound.cshtml");
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message.ToString());
-                    return NotFound();
+                    return View("~/Views/NotFound/NotFound.cshtml");
                 }
             }
 
-            
-
+           
             return View("Delete", branch);
         }
 
