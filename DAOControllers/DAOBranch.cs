@@ -9,6 +9,7 @@ using Models;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using DAOControllers.ManagerControllers;
+using System.Security.Cryptography;
 
 namespace DAOControllers
 {
@@ -26,14 +27,12 @@ namespace DAOControllers
 
             try
             {
-                StringBuilder sb = new StringBuilder();
                 SqlDataReader reader;
 
                 using (var objConnection = new SqlConnection(_connection))
                 {
-                    sb.AppendLine("SELECT idBranch, description, createdDate FROM Branch");
-                    SqlCommand cmd = new SqlCommand(sb.ToString(), objConnection);
-                    cmd.CommandType = System.Data.CommandType.Text;
+                   SqlCommand cmd = new SqlCommand("sp_list_all_branches", objConnection);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                     await objConnection.OpenAsync();
                     using (reader = await cmd.ExecuteReaderAsync())
@@ -55,26 +54,24 @@ namespace DAOControllers
                 allBranches = new List<Branch>();
             }
 
-            //jsonStringResponse = createJsonResponse(allBranches);
-
             return allBranches;
         }//End listing all branches
 
         public async Task<Branch> getById(int idBranch)
         {
             Branch branch = new Branch();
+            string message = string.Empty;
 
             try
             {
                 using (var objConnection = new SqlConnection(_connection))
                 {
                     SqlDataReader reader;
-                    StringBuilder sb = new StringBuilder();
                     SqlCommand cmd;
 
-                    sb.AppendLine("SELECT idBranch, description, createdDate FROM Branch WHERE idBranch = " + idBranch);
-                    cmd = new SqlCommand(sb.ToString(), objConnection);
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd = new SqlCommand("sp_get_by_id_branch", objConnection);
+                    cmd.Parameters.AddWithValue("idBranch", idBranch);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                     await objConnection.OpenAsync();
 
@@ -87,16 +84,22 @@ namespace DAOControllers
                             description = reader["description"].ToString(),
                             createdDate = Convert.ToDateTime(reader["createdDate"].ToString())
                             };
+
                         }
+                        
                     }
                 }
+
+                message = branch.description;
                    
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message.ToString());
+                message = ex.Message.ToString();
                 branch = new Branch(); ;
             }
+
+            Console.WriteLine(message);
 
             return branch;
         }//End get branch id
@@ -206,8 +209,7 @@ namespace DAOControllers
         public async Task<bool> delete(int idBranch)
         {
             bool response = false;
-            //out string message = string.Empty;
-            //string jsonStringResponse;
+            string message = string.Empty;
             
             try
             {
@@ -223,18 +225,18 @@ namespace DAOControllers
                     await cmd.ExecuteNonQueryAsync();
 
                     response = Convert.ToBoolean(cmd.Parameters["response"].Value);
-                    //message = cmd.Parameters["message"].Value.ToString();
+                    message = cmd.Parameters["message"].Value.ToString();
 
                 }
 
             }
             catch (Exception ex)
             {
-                //message= ex.Message.ToString();
+                message= ex.Message.ToString();
                 response = false;
             }
 
-            //jsonStringResponse = createJsonResponse(idBranch);
+            Console.WriteLine(message);
 
             return response;
         }//End delete branch

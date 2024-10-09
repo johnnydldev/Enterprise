@@ -26,15 +26,12 @@ namespace DAOControllers
 
             using (var objConnection = new SqlConnection(_connection))
             {
-                StringBuilder sb = new StringBuilder();
                 SqlDataReader reader;
                 try
                 {
-                    sb.AppendLine("SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, b.idBranch, b.description[enterpriseName], e.createdDate FROM Employee e");
-                    sb.AppendLine("INNER JOIN Branch b ON e.idBranch = b.idBranch;");
-
-                    SqlCommand cmd = new SqlCommand(sb.ToString(), objConnection);
-                    cmd.CommandType = CommandType.Text;
+                  
+                    SqlCommand cmd = new SqlCommand("sp_list_all_employees", objConnection);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     await objConnection.OpenAsync();
 
@@ -84,14 +81,11 @@ namespace DAOControllers
                 using (var objConnection = new SqlConnection(_connection))
                 {
                     SqlDataReader reader;
-                    StringBuilder sb = new StringBuilder();
                     SqlCommand cmd;
 
-                    sb.AppendLine("SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, b.idBranch, b.description[enterpriseName], e.createdDate FROM Employee e");
-                    sb.AppendLine("INNER JOIN Branch b ON e.idBranch = b.idBranch"); 
-                    sb.AppendLine("WHERE e.idEmployee = "+idEmployee);
-                    cmd = new SqlCommand(sb.ToString(), objConnection);
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd = new SqlCommand("sp_select_employee_by_id", objConnection);
+                    cmd.Parameters.AddWithValue("idEmployee", idEmployee);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                     await objConnection.OpenAsync();
 
@@ -136,13 +130,9 @@ namespace DAOControllers
                 using (var objConnection = new SqlConnection(_connection))
                 {
                     SqlDataReader reader;
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendLine("SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, e.idBranch, b.description[enterprise]");
-                    sb.AppendLine("FROM Employee e INNER JOIN Branch b ON e.idBranch = b.idBranch");
-                    sb.AppendLine("WHERE b.idBranch = " + idBranch);
-
-                    SqlCommand cmd = new SqlCommand(sb.ToString(), objConnection);
-                    cmd.CommandType = CommandType.Text;
+                   
+                    SqlCommand cmd = new SqlCommand("sp_list_all_employees_by_branch", objConnection);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     await objConnection.OpenAsync();
 
@@ -171,10 +161,9 @@ namespace DAOControllers
             }//End query reading
             catch (Exception ex)
             {
-                string msg = ex.Message.ToString();
+                Console.WriteLine(ex.Message.ToString());
                 allEmployees = new List<Employee>();
             }
-
 
             return allEmployees;
         }//End listing employees by branch
@@ -219,7 +208,7 @@ namespace DAOControllers
         {
             int employeeGenerated = 0;
             string message = string.Empty;
-            Console.WriteLine(objEmployee.objBranch.idBranch.ToString());
+
             try
             {
                 using (var objConnection = new SqlConnection(_connection))
@@ -274,7 +263,7 @@ namespace DAOControllers
                         cmd.CommandType = CommandType.StoredProcedure;
 
 
-                    await objConnection.OpenAsync();
+                        await objConnection.OpenAsync();
                         await cmd.ExecuteNonQueryAsync();
 
                         response = Convert.ToBoolean(cmd.Parameters["response"].Value);

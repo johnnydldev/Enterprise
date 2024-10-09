@@ -3,18 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6CB0581-F7BB-458E-A5C3-D407E16229D1}|..\\DAOControllers\\DAOControllers.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\daocontrollers\\daoemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6CB0581-F7BB-458E-A5C3-D407E16229D1}|..\\DAOControllers\\DAOControllers.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\daocontrollers\\managercontrollers\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB7987FA-3A9F-4C46-AFAD-B7B2A0EB9F1A}|Enterprise.csproj|c:\\users\\johnnydl\\documents\\proyectos c#\\mvc\\enterpriseproject\\enterprise\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -28,19 +28,20 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Employee\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Employee\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Employee\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Employee\\Edit.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Employee\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Create.cshtml",
+              "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Views\\Employee\\Create.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-04T22:33:38.418Z"
+              "WhenOpened": "2024-10-08T22:03:38.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,7 +57,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\Enterprise\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
@@ -64,25 +65,24 @@
               "RelativeToolTip": "Controllers\\EmployeeController.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAIwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T04:21:05.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T04:21:05.736Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DAOEmployee.cs",
               "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\DAOEmployee.cs",
               "RelativeDocumentMoniker": "..\\DAOControllers\\DAOEmployee.cs",
               "ToolTip": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\DAOEmployee.cs",
               "RelativeToolTip": "..\\DAOControllers\\DAOEmployee.cs",
-              "ViewState": "AgIAAOcAAAAAAAAAAAAowAMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAuwAcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T04:00:14.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\JohnnyDL\\Documents\\Proyectos C#\\MVC\\EnterpriseProject\\DAOControllers\\ManagerControllers\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "..\\DAOControllers\\ManagerControllers\\IGenericRepository.cs",
@@ -90,7 +90,8 @@
               "RelativeToolTip": "..\\DAOControllers\\ManagerControllers\\IGenericRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:39:14.487Z"
+              "WhenOpened": "2024-10-01T06:39:14.487Z",
+              "EditorCaption": ""
             }
           ]
         }
