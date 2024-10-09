@@ -8,37 +8,89 @@ using System.Diagnostics;
 namespace Enterprise.Controllers
 {
     
-    public class EmployeeController : Controller
+    public class EmployeeController(ILogger<EmployeeController> logger,
+            IGenericRepository<Employee> employee,
+            IGenericRepository<Branch> branch) : Controller
     {
 
-        private readonly ILogger<EmployeeController> _logger;
-        private readonly IGenericRepository<Employee> _employeeRepository;
-        private readonly IGenericRepository<Branch> _branchRepository;
+        private readonly ILogger<EmployeeController> _logger = logger;
+        private readonly IGenericRepository<Employee> _employeeRepository = employee;
+        private readonly IGenericRepository<Branch> _branchRepository = branch;
 
-        public EmployeeController(ILogger<EmployeeController> logger,
-            IGenericRepository<Employee> employee,
-            IGenericRepository<Branch> branchRepository)
-        {
-            _logger = logger;
-            _employeeRepository = employee;
-            _branchRepository = branchRepository;
-        }
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
-            List<Employee> _listEmployee = await _employeeRepository.getAll();
+            List<Employee> _listEmployee = await _employeeRepository.getAll(); ;
+            List<Branch> _listBranch = await _branchRepository.getAll();
 
-            if (_listEmployee.Any())
+   
+            if (_listEmployee.Count > 0)
             {
                 Console.WriteLine(Ok(_listEmployee));
             }
 
-            return View("Index", _listEmployee);
+            EmployeeBranchViewModel model = new()
+            {
+                employees = _listEmployee,
+                branches = _listBranch
+            };
+
+            Console.WriteLine(_listEmployee.Count);
+
+            return View("Index", model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Index(string employeeBranch, string employee)
+        {
+            List<Employee> _listEmployee = [];
+            List<Branch> _listBranch = await _branchRepository.getAll();
+
+            if (employee == null && employeeBranch == null)
+            {
+                _listEmployee = await _employeeRepository.getAll();
+            }
+
+            if (employeeBranch != null)
+            {
+                int idBranch = Convert.ToInt32(employeeBranch);
+                _listEmployee = await _employeeRepository.allMatchedBy(idBranch);
+            }
+
+            if (employee != null)
+            {
+                _listEmployee = await _employeeRepository.allMatchedWith(employee);
+            }
+
+            if (employee != null && employeeBranch != null)
+            {
+                int idBranch = Convert.ToInt32(employeeBranch);
+                _listEmployee = await _employeeRepository.allMatches(idBranch, employee);
+            }
+
+            if (_listEmployee.Count > 0)
+            {
+                Console.WriteLine(Ok(_listEmployee));
+            }
+            else
+            {
+                Console.WriteLine(NotFound(_listEmployee));
+            }
+
+            EmployeeBranchViewModel model = new()
+            {
+                employees = _listEmployee,
+                branches = _listBranch
+            };
+
+            return View("Index", model);
         }
 
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            Branch branch = new Branch();
+            Branch branch = new();
             ViewBag.listBranch = new SelectList( await _branchRepository.getAll(),"idBranch", "description", branch);
 
             return View("Create");
@@ -200,10 +252,7 @@ namespace Enterprise.Controllers
                 }
             }
 
-
-            return View("Delete", employee);
         }
-
 
 
     }//End employee controller

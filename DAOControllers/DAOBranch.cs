@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Models;
-using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using DAOControllers.ManagerControllers;
-using System.Security.Cryptography;
 
 namespace DAOControllers
 {
@@ -31,8 +27,10 @@ namespace DAOControllers
 
                 using (var objConnection = new SqlConnection(_connection))
                 {
-                   SqlCommand cmd = new SqlCommand("sp_list_all_branches", objConnection);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    SqlCommand cmd = new SqlCommand("sp_list_all_branches", objConnection)
+                    {
+                        CommandType = System.Data.CommandType.StoredProcedure
+                    };
 
                     await objConnection.OpenAsync();
                     using (reader = await cmd.ExecuteReaderAsync())
@@ -60,7 +58,7 @@ namespace DAOControllers
         public async Task<Branch> getById(int idBranch)
         {
             Branch branch = new Branch();
-            string message = string.Empty;
+            string message;
 
             try
             {
@@ -114,9 +112,10 @@ namespace DAOControllers
                 {
                     string consult = "SELECT MAX(idBranch) as idResult FROM Branch";
 
-                    SqlCommand cmd = new SqlCommand(consult, objConnection);
-                    cmd.CommandType = CommandType.Text;
-
+                    SqlCommand cmd = new SqlCommand(consult, objConnection)
+                    { 
+                        CommandType = CommandType.Text 
+                    };
                     await objConnection.OpenAsync();
 
                     using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
@@ -241,6 +240,20 @@ namespace DAOControllers
             return response;
         }//End delete branch
 
+        public Task<List<Branch>> allMatchedBy(int idModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Branch>> allMatchedWith(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Branch>> allMatches(int idModel, string name)
+        {
+            throw new NotImplementedException();
+        }
 
     }//End DAO branch class
 }//End namespace

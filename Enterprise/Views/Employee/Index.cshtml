@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Models.Employee>
+﻿@model Models.EmployeeBranchViewModel
 
 @{
     ViewData["Title"] = "Empleados";
@@ -8,8 +8,34 @@
     <h2 class="text-green-color">
        Empleados
     </h2>
-
+    
     <a class="link-button rounded-component btn-borderless bg-green-light" asp-action="Create">Crear Nuevo(a)</a>
+
+    <form class="rounded mt-2 mb-2 fs-5 bg-green-opaque" asp-controller="Employee" asp-action="Index" method="Post">
+        <div class="d-flex flex-row filter-container m-2 bg-green-opaque">
+            <label class="control-label m-2 fw-bold text-white-color">Sucursal:</label>
+            <select asp-for="employeeBranch" class="form-select mt-2" aria-label="Default select example">
+                @if(Model.branches.Any()){
+                    <option value="">Selecciona una sucursal</option>
+                    foreach (var branch in Model.branches)
+                    {
+                        <option value="@branch.idBranch">@branch.description</option>
+                    }
+    
+                }
+                else
+                {
+                    <option value="">No hay sucursales registradas</option>
+                }
+   
+            </select>
+        </div>
+        <div class="d-flex flex-row filter-container m-2">
+            <label class="control-label m-2 fw-bold text-white-color" >Nombre del empleado:</label>
+            <input class="search rounded-component m-2" type="text" asp-for="employee" />
+            <input class="link-button rounded-component btn-borderless bg-green-light m-2" type="submit" value="Filtrar" />
+        </div>
+    </form>
 
     <table id="employee-table" class="table bg-green-opaque text-white-color table-borderless rounded-component mt-2">
         <thead class="bg-green-light">
@@ -24,9 +50,9 @@
             </tr>
         </thead>
         <tbody>
-            @if (Model.Any())
+            @if (Model.employees.Any())
             {
-                @foreach (var item in Model)
+                @foreach (var item in Model.employees)
                 {
 
                     <tr>
@@ -47,7 +73,7 @@
             else
             {
                 <tr>
-                    <td colspan='6' class="text-center">No se encontraron productos.</td>
+                    <td colspan='6' class="text-center">No se encontraron empleados.</td>
                 </tr>
             }
 

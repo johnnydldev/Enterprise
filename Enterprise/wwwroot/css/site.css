@@ -34,6 +34,15 @@ a{
     padding: 5px;
 }
 
+input{
+    padding: 5px;
+}
+
+.search{
+    width: 600px;
+    height: 40px;
+}
+
 .bg-orange {
     background-color: #E2703A;
 }
@@ -100,7 +109,7 @@ a{
 }
 
 .text-yellow-color:hover, .text-yellow-color:focus{
-    color: #white;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }

@@ -15,6 +15,8 @@ namespace DAOControllers.ManagerControllers
         Task<bool> edit(T model);
         Task<bool> delete(int id);
         Task<int> getMaxId();
-
+        Task<List<T>> allMatchedBy(int idModel);
+        Task<List<T>> allMatchedWith(string name);
+        Task<List<T>> allMatches(int idModel, string name);
     }
 }

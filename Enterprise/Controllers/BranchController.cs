@@ -9,24 +9,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Enterprise.Controllers
 {
-    public class BranchController : Controller
+    public class BranchController(ILogger<BranchController> logger,
+            IGenericRepository<Branch> branch) : Controller
     {
 
-        private readonly ILogger<BranchController> _logger;
-        private readonly IGenericRepository<Branch> _branchRepository;
-
-        public BranchController(ILogger<BranchController> logger,
-            IGenericRepository<Branch> branch)
-        {
-            _logger = logger;
-            _branchRepository = branch;
-        }
+        private readonly ILogger<BranchController> _logger = logger;
+        private readonly IGenericRepository<Branch> _branchRepository = branch;
 
         public async Task<IActionResult> Index()
         {
             List<Branch> _listBranch = await _branchRepository.getAll();
             
-            if (_listBranch.Any())
+            if (_listBranch.Count > 0)
             {
                Console.WriteLine(Ok(_listBranch));
             }
@@ -171,10 +165,8 @@ namespace Enterprise.Controllers
                     Console.WriteLine(ex.Message.ToString());
                     return View("~/Views/NotFound/NotFound.cshtml");
                 }
-            }
-
-           
-            return View("Delete", branch);
+            } 
+            
         }
 
 

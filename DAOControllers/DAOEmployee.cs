@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Models;
 using System.Data.SqlClient;
 using System.Data;
-using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using DAOControllers.ManagerControllers;
 
@@ -29,9 +26,11 @@ namespace DAOControllers
                 SqlDataReader reader;
                 try
                 {
-                  
-                    SqlCommand cmd = new SqlCommand("sp_list_all_employees", objConnection);
-                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlCommand cmd = new SqlCommand("sp_list_all_employees", objConnection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
 
                     await objConnection.OpenAsync();
 
@@ -121,7 +120,7 @@ namespace DAOControllers
             return employee;
         }//End get employee id
 
-        public async Task<List<Employee>> allEmployeeByBranch(int idBranch)
+        public async Task<List<Employee>> allMatches(int idBranch, string name)
         {
             List<Employee> allEmployees = new List<Employee>();
 
@@ -130,8 +129,10 @@ namespace DAOControllers
                 using (var objConnection = new SqlConnection(_connection))
                 {
                     SqlDataReader reader;
-                   
-                    SqlCommand cmd = new SqlCommand("sp_list_all_employees_by_branch", objConnection);
+
+                    SqlCommand cmd = new SqlCommand("sp_all_employees_matches", objConnection);
+                    cmd.Parameters.AddWithValue("idBranch", idBranch);
+                    cmd.Parameters.AddWithValue("name", name);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     await objConnection.OpenAsync();
@@ -150,7 +151,105 @@ namespace DAOControllers
                                 objBranch = new Branch
                                 {
                                     idBranch = Convert.ToInt32(reader["idBranch"].ToString()),
-                                    description = reader["enterprise"].ToString()
+                                    description = reader["enterpriseName"].ToString(),
+                                    createdDate = Convert.ToDateTime(reader["createdDate"].ToString())
+                                }
+                            });
+
+                        }
+                    }
+                }
+
+            }//End query reading
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                allEmployees = new List<Employee>();
+            }
+
+            return allEmployees;
+        }//End listing employees by branch
+        public async Task<List<Employee>> allMatchedBy(int idBranch)
+        {
+            List<Employee> allEmployees = new List<Employee>();
+
+            try
+            {
+                using (var objConnection = new SqlConnection(_connection))
+                {
+                    SqlDataReader reader;
+                   
+                    SqlCommand cmd = new SqlCommand("sp_list_all_employees_by_branch", objConnection);
+                    cmd.Parameters.AddWithValue("idBranch", idBranch);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    await objConnection.OpenAsync();
+
+                    using (reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            allEmployees.Add(new Employee
+                            {
+                                idEmployee = Convert.ToInt32(reader["idEmployee"].ToString()),
+                                name = reader["name"].ToString(),
+                                age = Convert.ToInt32(reader["age"].ToString()),
+                                sex = reader["sex"].ToString(),
+                                workDescription = reader["workDescription"].ToString(),
+                                objBranch = new Branch
+                                {
+                                    idBranch = Convert.ToInt32(reader["idBranch"].ToString()),
+                                    description = reader["enterpriseName"].ToString(),
+                                    createdDate = Convert.ToDateTime(reader["createdDate"].ToString())
+                                }
+                            });
+
+                        }
+                    }
+                }
+
+            }//End query reading
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                allEmployees = new List<Employee>();
+            }
+
+            return allEmployees;
+        }//End listing employees by branch
+
+        public async Task<List<Employee>> allMatchedWith(string name)
+        {
+            List<Employee> allEmployees = new List<Employee>();
+
+            try
+            {
+                using (var objConnection = new SqlConnection(_connection))
+                {
+                    SqlDataReader reader;
+
+                    SqlCommand cmd = new SqlCommand("sp_all_employees_match_with", objConnection);
+                    cmd.Parameters.AddWithValue("name", name);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    await objConnection.OpenAsync();
+
+                    using (reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            allEmployees.Add(new Employee
+                            {
+                                idEmployee = Convert.ToInt32(reader["idEmployee"].ToString()),
+                                name = reader["name"].ToString(),
+                                age = Convert.ToInt32(reader["age"].ToString()),
+                                sex = reader["sex"].ToString(),
+                                workDescription = reader["workDescription"].ToString(),
+                                objBranch = new Branch
+                                {
+                                    idBranch = Convert.ToInt32(reader["idBranch"].ToString()),
+                                    description = reader["enterpriseName"].ToString(),
+                                    createdDate = Convert.ToDateTime(reader["createdDate"].ToString())
                                 }
                             });
 
@@ -178,8 +277,10 @@ namespace DAOControllers
                 {
                     string consult = "SELECT MAX(idEmployee) as idResult FROM Employee";
 
-                    SqlCommand cmd = new SqlCommand(consult, objConnection);
-                    cmd.CommandType = CommandType.Text;
+                    SqlCommand cmd = new SqlCommand(consult, objConnection)
+                    {
+                        CommandType = CommandType.Text
+                    };
 
                     await objConnection.OpenAsync();
 
@@ -286,7 +387,7 @@ namespace DAOControllers
         public async Task<bool> delete(int idEmployee)
         {
             bool response = false;
-            string message = string .Empty;
+            string message;
 
             try
             {
@@ -309,10 +410,11 @@ namespace DAOControllers
             }
             catch (Exception ex)
             {
-                response=false; 
+                response = false; 
                 message = ex.Message;
             }
 
+            Console.WriteLine(message);
 
             return response;
 
