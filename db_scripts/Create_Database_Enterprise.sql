@@ -133,14 +133,69 @@ BEGIN
 		
 		SET @message = 'El empleado especificado no existe.'
 
-
 END
 
 
 GO
 --End sp delete employee
 
+CREATE PROC sp_list_all_employees
+AS
+BEGIN
+	
+	SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, b.idBranch, b.description[enterpriseName], e.createdDate FROM Employee e INNER JOIN Branch b ON e.idBranch = b.idBranch;
+END
 
+GO
+
+CREATE PROC sp_list_all_employees_by_branch
+(
+@idBranch INT
+)
+AS
+BEGIN
+	
+	SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, b.idBranch, b.description[enterpriseName], e.createdDate FROM Employee e INNER JOIN Branch b ON e.idBranch = b.idBranch WHERE b.idBranch = @idBranch;
+END
+
+GO
+
+CREATE PROC sp_select_employee_by_id
+(
+@idEmployee INT
+)
+AS
+BEGIN
+	
+	SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, b.idBranch, b.description[enterpriseName], e.createdDate FROM Employee e INNER JOIN Branch b ON e.idBranch = b.idBranch WHERE e.idEmployee = @idEmployee;
+END
+
+GO
+
+CREATE PROC sp_all_employees_match_with
+(
+@name VARCHAR(150)
+)
+AS
+BEGIN
+	
+	SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, b.idBranch, b.description[enterpriseName], e.createdDate FROM Employee e INNER JOIN Branch b ON e.idBranch = b.idBranch WHERE e.name like '%'+@name+'%';
+END
+
+GO
+
+CREATE PROC sp_all_employees_matches
+(
+@idBranch INT,
+@name VARCHAR(150)
+)
+AS
+BEGIN
+	
+	SELECT e.idEmployee, e.name, e.age, e.sex, e.workDescription, b.idBranch, b.description[enterpriseName], e.createdDate FROM Employee e INNER JOIN Branch b ON e.idBranch = b.idBranch WHERE b.idBranch = @idBranch AND e.name like '%'+@name+'%';
+END
+
+GO
 --STARING STORE PROCEDURE OF BRANCH
 CREATE PROC sp_create_branch
 (
@@ -241,11 +296,29 @@ END
 --End sp delete branch 
 GO
 
+CREATE PROC sp_list_all_branches
+AS
+BEGIN
+	
+	SELECT idBranch, description, createdDate FROM Branch
+
+END
+
+GO
+
+CREATE PROC sp_get_by_id_branch
+(
+@idBranch INT
+)
+AS
+BEGIN
+	
+	SELECT idBranch, description, createdDate FROM Branch WHERE idBranch = @idBranch
+	
+END
 
 
-
-
-
+GO
 
 
 
@@ -267,13 +340,13 @@ SELECT idBranch, description FROM Branch;
 
 GO
 
-EXEC sp_create_branch @description = 'Sysba', @idResult = 0, @message = ''
+EXEC sp_create_branch @description = 'Sysba', @idResult = 0
 GO
-EXEC sp_create_branch @description = 'Caja Popular', @idResult = 0, @message = ''
+EXEC sp_create_branch @description = 'Caja Popular', @idResult = 0
 GO
-EXEC sp_create_branch @description = 'Jumex', @idResult = 0, @message = ''
+EXEC sp_create_branch @description = 'Jumex', @idResult = 0
 GO
-EXEC sp_create_branch @description = 'Coca cola', @idResult = 0, @message = ''
+EXEC sp_create_branch @description = 'Coca cola', @idResult = 0
 GO
 
 EXEC sp_create_employee @name ='Pamela Garcia', @age = 23, @sex ='Mujer', @workDescription ='Diseñador', @idBranch = 1,@idResult = 0, @message = ''
